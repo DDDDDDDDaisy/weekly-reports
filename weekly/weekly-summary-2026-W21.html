@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北美及大洋洲客服周报 W21 · 2026.05.15–05.21</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  background: #eef1f6;
+  color: #1e293b;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.report-header {
+  background: linear-gradient(130deg, #1e3a8a 0%, #2563eb 100%);
+  color: white;
+  padding: 30px 44px 26px;
+}
+.report-title { font-size: 20px; font-weight: 700; letter-spacing: .3px; margin-bottom: 6px; }
+.report-meta { opacity: .75; font-size: 12.5px; display: flex; gap: 18px; flex-wrap: wrap; }
+.report-meta span::before { content: "·"; margin-right: 6px; opacity: .5; }
+.report-meta span:first-child::before { display: none; }
+
+.nav-bar {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 44px;
+  display: flex;
+  position: sticky; top: 0; z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.nav-bar a {
+  padding: 13px 18px;
+  font-size: 13px; font-weight: 600; color: #64748b;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all .15s;
+}
+.nav-bar a:hover { color: #1e293b; }
+.nav-bar a.active { color: #2563eb; border-bottom-color: #2563eb; }
+
+.container { max-width: 1080px; margin: 0 auto; padding: 28px 24px 60px; }
+
+.section { margin-bottom: 36px; }
+.section-hd { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.section-num {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: #2563eb; color: white;
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.section-title { font-size: 15px; font-weight: 700; color: #0f172a; }
+.section-sub { font-size: 12px; color: #94a3b8; font-weight: 400; margin-left: 4px; }
+
+/* ── Market cards ── */
+.market-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.mc { background: white; border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.07), 0 4px 12px rgba(0,0,0,.04); overflow: hidden; }
+.mc-top { padding: 16px 20px 14px; border-left: 5px solid #e2e8f0; }
+.mc.us .mc-top { border-left-color: #3b82f6; }
+.mc.ca .mc-top { border-left-color: #10b981; }
+.mc.au .mc-top { border-left-color: #f59e0b; }
+.mc-hd { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.mc-name { font-size: 16px; font-weight: 700; }
+.badge { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+.badge-ok   { background: #d1fae5; color: #065f46; }
+.badge-warn { background: #fef3c7; color: #92400e; }
+.badge-fail { background: #fee2e2; color: #991b1b; }
+.mc-summary { font-size: 13px; color: #475569; line-height: 1.7; margin-bottom: 14px; }
+.mc-summary strong { color: #1e293b; }
+.mc-kpis {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  padding: 12px 20px 14px;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+}
+.kchip {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 12px; padding: 3px 9px;
+  border-radius: 7px; background: white;
+  border: 1px solid #e2e8f0; white-space: nowrap;
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.d-ok   { background: #10b981; }
+.d-fail { background: #ef4444; }
+.d-warn { background: #f59e0b; }
+.kchip b { font-weight: 600; color: #1e293b; }
+
+/* ── Detail panels ── */
+.mdetail { background: white; border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.07); margin-bottom: 16px; overflow: hidden; }
+.mdetail-hd {
+  padding: 16px 24px;
+  background: #f8fafc;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex; align-items: center; gap: 12px;
+}
+.mdetail-hd h3 { font-size: 14px; font-weight: 700; flex: 1; }
+.mdetail-body { padding: 22px 24px; }
+.sublabel {
+  font-size: 11px; font-weight: 700; color: #94a3b8;
+  text-transform: uppercase; letter-spacing: .8px;
+  margin-bottom: 10px; margin-top: 20px;
+}
+.sublabel:first-child { margin-top: 0; }
+.detail-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+
+/* KPI table */
+.ktable { width: 100%; border-collapse: collapse; font-size: 13px; }
+.ktable th {
+  text-align: left; padding: 8px 14px;
+  background: #f8fafc; color: #64748b;
+  font-size: 11.5px; font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+}
+.ktable td { padding: 9px 14px; border-bottom: 1px solid #f8fafc; vertical-align: middle; }
+.ktable tr:last-child td { border-bottom: none; }
+.ktable .chan {
+  font-size: 10.5px; font-weight: 700; color: #94a3b8;
+  text-transform: uppercase; letter-spacing: .5px; white-space: nowrap;
+}
+.kv { font-weight: 700; font-size: 15px; }
+.kv-ok   { color: #10b981; }
+.kv-fail { color: #ef4444; }
+.kv-warn { color: #f59e0b; }
+.kv-neu  { color: #64748b; }
+.tgt  { font-size: 12px; color: #94a3b8; }
+.delta { font-size: 11.5px; font-weight: 600; margin-left: 4px; }
+.dup   { color: #10b981; }
+.ddown { color: #ef4444; }
+.st-ok   { color: #10b981; font-size: 12.5px; font-weight: 600; }
+.st-fail { color: #ef4444; font-size: 12.5px; font-weight: 600; }
+.st-warn { color: #f59e0b; font-size: 12.5px; font-weight: 600; }
+.st-neu  { color: #94a3b8; font-size: 12.5px; }
+
+/* Trend badge */
+.trend-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.tr-badge {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 11px; font-weight: 600;
+  padding: 2px 7px; border-radius: 5px;
+  white-space: nowrap;
+}
+.tr-down     { background: #fee2e2; color: #b91c1c; }
+.tr-up       { background: #d1fae5; color: #065f46; }
+.tr-flat     { background: #f1f5f9; color: #64748b; }
+.tr-critical { background: #7f1d1d; color: #fca5a5; }  /* 连续下跌 */
+.tr-note     { font-size: 11px; color: #94a3b8; }
+
+/* Insights */
+.insight-list { display: flex; flex-direction: column; gap: 9px; }
+.ins { padding: 11px 16px; border-radius: 9px; border-left: 3px solid; font-size: 13px; }
+.ins-ok      { background: #f0fdf4; border-color: #10b981; }
+.ins-warn    { background: #fffbeb; border-color: #f59e0b; }
+.ins-fail    { background: #fef2f2; border-color: #ef4444; }
+.ins-context { background: #f0f9ff; border-color: #38bdf8; }
+.ins-next    { background: #faf5ff; border-color: #a855f7; }
+.ins-lbl     { font-weight: 600; margin-bottom: 3px; color: #1e293b; }
+.ins-txt     { color: #475569; line-height: 1.6; font-size: 12.5px; }
+
+/* Action table */
+.action-card { background: white; border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.07); overflow: hidden; }
+.atable { width: 100%; border-collapse: collapse; font-size: 13px; }
+.atable th {
+  text-align: left; padding: 10px 16px;
+  background: #f8fafc; color: #64748b;
+  font-size: 11.5px; font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+}
+.atable td { padding: 11px 16px; border-bottom: 1px solid #f8fafc; vertical-align: top; }
+.atable tr:last-child td { border-bottom: none; }
+.atable tr:hover td { background: #fafafa; }
+.am { font-weight: 700; white-space: nowrap; }
+.adesc { line-height: 1.6; color: #334155; }
+.apri { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; white-space: nowrap; display: inline-block; }
+.pri-urgent  { background: #fee2e2; color: #991b1b; }
+.pri-ongoing { background: #fef3c7; color: #92400e; }
+.pri-new     { background: #dbeafe; color: #1e40af; }
+.pri-watch   { background: #f3e8ff; color: #6b21a8; }
+.pri-done    { background: #d1fae5; color: #065f46; }
+.adate { color: #94a3b8; font-size: 12px; white-space: nowrap; }
+
+.page-footer { text-align: center; padding: 20px; font-size: 12px; color: #94a3b8; }
+.page-footer a { color: #3b82f6; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="report-header">
+  <div class="report-title">📊 北美及大洋洲客服周报 · W21（2026.05.15–05.21）</div>
+  <div class="report-meta">
+    <span>覆盖市场：🇺🇸 US &nbsp; 🇨🇦 CA &nbsp; 🇦🇺 AU</span>
+    <span>更新时间：2026-05-25</span>
+  </div>
+</div>
+
+<nav class="nav-bar">
+  <a href="#s1" class="active">① 核心结论</a>
+  <a href="#s2">② 详细分析</a>
+  <a href="#s3">③ 改善与跟进</a>
+</nav>
+
+<div class="container">
+
+  <!-- ═══════════════════════════════
+       SECTION 1  核心结论
+  ═══════════════════════════════ -->
+  <div class="section" id="s1">
+    <div class="section-hd">
+      <div class="section-num">1</div>
+      <div class="section-title">核心结论<span class="section-sub">— 一屏掌握三地 W21（05.15–05.21）进展</span></div>
+    </div>
+    <div class="market-cards">
+
+      <!-- US -->
+      <div class="mc us">
+        <div class="mc-top">
+          <div class="mc-hd">
+            <div class="mc-name">🇺🇸 US</div>
+            <span class="badge badge-fail">🔴 满意度连续下滑</span>
+          </div>
+          <p class="mc-summary">
+            <strong>接通稳定，FCR 本周回升达标，满意度与电话接通率仍为核心风险。</strong><br>
+            FCR 96.4%（↑4.1pp vs W20），本周首次超目标。在线满意度 82.77%（▼3.95pp），账户类不满占比24%，与W8税务通知直接关联。电话满意度 73.74%，<strong>单周骤降 ▼16.35pp</strong>，为本周最紧急风险。W8 税务认证邮件持续发送至 6/12，邮件工单量本周已因此↑21%。<br>
+            注：5/22 监管发文将在<strong>下周周报</strong>中体现，本周一单日咨询量已达平日半周体量。
+          </p>
+        </div>
+        <div class="mc-kpis">
+          <div class="kchip"><span class="dot d-ok"></span><b>30s接通 98.86%</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>满意度 82.77% ▼2.8pp</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>FCR 96.4% ↑4.1pp ✓</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>电话接通 87.96% ↑3.2pp</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>电话满意 73.74% ▼16.4pp</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>邮件SLA 91.2%</b></div>
+        </div>
+      </div>
+
+      <!-- CA -->
+      <div class="mc ca">
+        <div class="mc-top">
+          <div class="mc-hd">
+            <div class="mc-name">🇨🇦 CA</div>
+            <span class="badge badge-warn">⚠ 在线满意度待提升</span>
+          </div>
+          <p class="mc-summary">
+            <strong>电话全线达标，在线满意度为唯一缺口。</strong><br>
+            电话接通率 96%、满意度 95.1%，均超目标；在线接通率达 100%，FCR 96.9% 稳健。<br>
+            在线满意度 88.7%，距目标 93% 差 <strong>4.3pp</strong>，为本周 CA 核心改善点。
+          </p>
+        </div>
+        <div class="mc-kpis">
+          <div class="kchip"><span class="dot d-ok"></span><b>在线接通 100%</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>满意度 88.7%</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>FCR 96.9%</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>电话接通 96.0%</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>电话满意 95.1%</b></div>
+        </div>
+      </div>
+
+      <!-- AU -->
+      <div class="mc au">
+        <div class="mc-top">
+          <div class="mc-hd">
+            <div class="mc-name">🇦🇺 AU</div>
+            <span class="badge badge-fail">🔴 多项未达标，人力恢复中</span>
+          </div>
+          <p class="mc-summary">
+            <strong>成都办公室关闭后，咨询量由 MY 团队全量承接，人力缺口致接通率严重偏低。</strong><br>
+            电话接通率 73.68%，但已较上周 <strong>↑15.76pp</strong>，改善趋势明显。团队人力陆续补齐，新人本周起正式加入接单。在线满意度 84.47%、FCR 95.20%，仍未达标，中期改善需持续推进。
+          </p>
+        </div>
+        <div class="mc-kpis">
+          <div class="kchip"><span class="dot d-fail"></span><b>在线接通 88.02%</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>满意度 84.47%</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>FCR 95.20%</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>电话接通 73.68% ↑15.8pp</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>电话满意 92.52%</b></div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /s1 -->
+
+
+  <!-- ═══════════════════════════════
+       SECTION 2  详细分析
+  ═══════════════════════════════ -->
+  <div class="section" id="s2">
+    <div class="section-hd">
+      <div class="section-num">2</div>
+      <div class="section-title">详细分析<span class="section-sub">— 趋势数据 · 渠道洞察 · 原因解析</span></div>
+    </div>
+
+    <!-- ── US ── -->
+    <div class="mdetail">
+      <div class="mdetail-hd">
+        <h3>🇺🇸 US — 详细数据与洞察</h3>
+        <span class="badge badge-fail">在线 1,839单 &nbsp;|&nbsp; 电话 1,885通 &nbsp;|&nbsp; 邮件 1,832单</span>
+      </div>
+      <div class="mdetail-body">
+        <div class="detail-cols">
+          <div>
+            <div class="sublabel">KPI 总览（含 W20 趋势对比）</div>
+            <table class="ktable">
+              <thead><tr><th>渠道</th><th>指标</th><th>本周 W21</th><th>目标</th><th>状态 &amp; 趋势</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4" class="chan">在线</td>
+                  <td>30s接通率</td>
+                  <td><span class="kv kv-ok">98.86%</span></td>
+                  <td class="tgt">≥90%</td>
+                  <td class="st-ok">● 达标</td>
+                </tr>
+                <tr>
+                  <td>总满意度</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-fail">82.77%</span>
+                      <span class="tr-badge tr-down">▼3.95pp</span>
+                    </div>
+                    <div class="tr-note">W20: 86.72%</div>
+                  </td>
+                  <td class="tgt">≥90%</td>
+                  <td class="st-fail">● 未达标<br><span class="tr-badge tr-down" style="margin-top:3px">连续下滑</span></td>
+                </tr>
+                <tr>
+                  <td>FCR 一次解决率</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-ok">96.4%</span>
+                      <span class="tr-badge tr-up">↑4.08pp</span>
+                    </div>
+                    <div class="tr-note">W20: 92.32%</div>
+                  </td>
+                  <td class="tgt">≥95%</td>
+                  <td class="st-ok">● 达标 +1.4pp</td>
+                </tr>
+                <tr>
+                  <td>平均处理时长</td>
+                  <td><span class="kv kv-ok">10.87m</span></td>
+                  <td class="tgt">—</td>
+                  <td class="st-ok">● 正常</td>
+                </tr>
+                <tr>
+                  <td rowspan="2" class="chan">邮件</td>
+                  <td>工单量</td>
+                  <td><span class="kv kv-neu">1,832</span></td>
+                  <td class="tgt">—</td>
+                  <td class="st-neu">—</td>
+                </tr>
+                <tr>
+                  <td>SLA</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-ok">91.20%</span>
+                      <span class="tr-badge tr-down">▼2.97pp</span>
+                    </div>
+                    <div class="tr-note">W20: 94.17%</div>
+                  </td>
+                  <td class="tgt">≥90%</td>
+                  <td class="st-ok">● 达标</td>
+                </tr>
+                <tr>
+                  <td rowspan="4" class="chan">电话</td>
+                  <td>呼入量</td>
+                  <td><span class="kv kv-neu">1,885</span></td>
+                  <td class="tgt">—</td>
+                  <td class="st-neu">—</td>
+                </tr>
+                <tr>
+                  <td>接通率</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-fail">87.96%</span>
+                      <span class="tr-badge tr-up">↑3.20pp</span>
+                    </div>
+                    <div class="tr-note">W20: 84.76%</div>
+                  </td>
+                  <td class="tgt">≥95%</td>
+                  <td class="st-fail">● 未达标<br><span class="tr-badge tr-up" style="margin-top:3px;font-size:10px">连续改善</span></td>
+                </tr>
+                <tr>
+                  <td>20s接通率</td>
+                  <td><span class="kv kv-fail">70.50%</span></td>
+                  <td class="tgt">≥80%</td>
+                  <td class="st-fail">● 未达标</td>
+                </tr>
+                <tr>
+                  <td>电话满意度</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-fail">73.74%</span>
+                      <span class="tr-badge tr-critical">▼16.35pp ⚠</span>
+                    </div>
+                    <div class="tr-note">W20: 90.09%（W20达标）</div>
+                  </td>
+                  <td class="tgt">≥90%</td>
+                  <td class="st-fail">● 单周骤降<br><span class="tr-badge tr-critical" style="margin-top:3px;font-size:10px">重点排查</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="sublabel">洞察 · 事件背景 · 原因解析</div>
+            <div class="insight-list">
+              <div class="ins ins-context">
+                <div class="ins-lbl">📌 W8 税务认证事件——持续性风险，多轮邮件触发中（贯穿至6月）</div>
+                <div class="ins-txt">
+                  W8 事件并非一次性，将持续驱动咨询量波动。<strong>未更新税务状态的客户后续将受到限制</strong>，触发时间取决于产品侧决策。<br><br>
+                  <strong>已发送</strong><br>
+                  &nbsp;&nbsp;· 5/14：149,060 封邮件（有资产客户）→ 直接导致 5/15 前后邮件及在线咨询爆量<br>
+                  &nbsp;&nbsp;· 5/22：66 封邮件（高资产客户）+ MY 团队协助外呼提醒<br><br>
+                  <strong>待发送（预计）</strong><br>
+                  &nbsp;&nbsp;· 5/27：10,000 封（有资产客户）<br>
+                  &nbsp;&nbsp;· 6/1：10,000 封（有资产客户）<br>
+                  &nbsp;&nbsp;· 6/5：9,822 封（有资产客户）<br>
+                  &nbsp;&nbsp;· 6/12：<strong style="color:#b91c1c">149,070 封（无资产客户）⚠ 量级与首批相当，需重点备战</strong><br><br>
+                  ② <strong>SpaceX IPO</strong>：招股书已明确 Moomoo 不在参与名单，相关咨询预计随热度消退。<br>
+                  &nbsp;&nbsp;&nbsp;Anthropic IPO 已有客户开始询问，需关注下阶段动态。
+                </div>
+              </div>
+              <div class="ins ins-next">
+                <div class="ins-lbl">🔮 W22 双重压力预警：5/22 监管 + 5/27 W8 第三批</div>
+                <div class="ins-txt">
+                  W22 将同时承受两类咨询压力：<br>
+                  ① <strong>5/22 监管发文</strong>：本周一单日咨询量已达平日半周体量，完整影响将在 W22 周报中体现；<br>
+                  ② <strong>5/27 W8 第三批</strong>（10,000 封，有资产客户），发送时间距本报告发布仅 2 天，账户类咨询将再次拉升。<br>
+                  建议提前完成人力预排，5/24 培训已完成，话术承接能力具备。
+                </div>
+              </div>
+              <div class="ins ins-ok">
+                <div class="ins-lbl">✓ FCR 96.4%（W20: 92.32%），↑4.08pp，本周达标超目标 +1.4pp</div>
+                <div class="ins-txt">FCR 本周显著回升（1,771/1,838单）。仍有 6 个业务类未达 95%，其中<strong>入金 93.7%（12单未解决）为最高风险</strong>——同时伴随不满率 5.8%，构成本周在线「双高风险」业务，需优先复盘。出金 91.9%（8单）不满率仅 1%，属流程信息补充问题，优先级次之。</div>
+              </div>
+              <div class="ins ins-fail">
+                <div class="ins-lbl">🔴 在线满意度 82.77%（W20: 86.72%），▼3.95pp，差目标 7.2pp</div>
+                <div class="ins-txt"><strong>账户类不满16单（本周最多，占在线24%）</strong>：与 5/14 发出的 149,060 封税务状态更新通知直接相关，CDD 审查/修改资料流程不透明是核心痛点（双周报5月上旬账户类同为最大不满来源），建议补充「预计审查时长 + 进度查询方式」标准话术。<br>入金（不满率 5.8%）为本周最高不满业务，需优先复盘失败/延迟场景话术。<strong>加密货币不满率 11.1%、用户营销工具 7%</strong>：FCR 虽达标但客户对结果不满，建议核查话术边界与预期管理方式。</div>
+              </div>
+              <div class="ins ins-warn">
+                <div class="ins-lbl">⚠ 邮件工单量 ↑21%（账户类/销户类激增）；SLA 91.20% 维持达标（W20: 94.17%，▼2.97pp）</div>
+                <div class="ins-txt">工单量骤增 321 单，账户类和销户类为主要增量，与 5/14 W8 邮件通知直接对应（响应率约 0.22%）。MY 客服 SLA 91.60% 与整体一致，团队吞吐能力基本稳定。注意：邮件满意度参评率 &lt;1%，按业务类别的不满工单样本不足，排名统计意义有限。<br>双波冲击风险：5/27（10K）、6/1（10K）、6/5（9.8K）、6/12（149K）仍待发，SLA 压力将持续。</div>
+              </div>
+              <div class="ins ins-fail">
+                <div class="ins-lbl">🔴🔴 电话满意度骤降至 73.74%（W20: 90.09%），▼16.35pp——账户类跃升为最大不满来源</div>
+                <div class="ins-txt"><strong>账户类本周7单（31.8%）</strong>，较 W20 的 2单（18.2%）跳升显著，为电话渠道本周最大不满来源；与 CDD 审查/账户限制咨询量升高一致（5/14 税务通知邮件触发）。<strong>资金类6单（27.3%）</strong>持续第二，WIRE 催进度/转仓催办仍是核心投诉类型。<br>接通率持续不达标（87.96%）背景下，119 单回拨（占呼入 6.3%）实为服务补救机制，建议评估 IVR 分流或优先队列优化以减少失联转回拨。</div>
+              </div>
+              <div class="ins ins-ok">
+                <div class="ins-lbl">✅ 质检三渠道全面达标——本周首次同步达标</div>
+                <div class="ins-txt">
+                  · <strong>在线 0.97%</strong>（达标 &lt;1%）：4单差错（致命1+非致命3），交易类占75%；致命单为止损+限价单组合场景解答错误，建议列入下周专项培训<br>
+                  · <strong>邮件 0.39%</strong>（达标，较上周 1.09% 大幅改善）：1单称呼拼写错误，零致命；6/12 邮件量再次冲高前建议将格式检查纳入发出前 SOP<br>
+                  · <strong>电话 0.32%</strong>（三渠道最佳）：1单非致命（等待超时未跟进），零致命；服务沟通规范类（C2/C3）本周占50%，建议通过随机抽听+即时反馈机制持续巩固
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CA ── -->
+    <div class="mdetail">
+      <div class="mdetail-hd">
+        <h3>🇨🇦 CA — 详细数据与洞察</h3>
+        <span class="badge badge-warn">在线 360单 &nbsp;|&nbsp; 电话 633通</span>
+      </div>
+      <div class="mdetail-body">
+        <div class="detail-cols">
+          <div>
+            <div class="sublabel">KPI 总览</div>
+            <table class="ktable">
+              <thead><tr><th>渠道</th><th>指标</th><th>本周 W21</th><th>目标</th><th>状态</th></tr></thead>
+              <tbody>
+                <tr><td rowspan="4" class="chan">在线</td><td>工单量</td><td><span class="kv kv-neu">360</span></td><td class="tgt">—</td><td class="st-neu">—</td></tr>
+                <tr><td>30s接通率</td><td><span class="kv kv-ok">100.0%</span></td><td class="tgt">≥95%</td><td class="st-ok">● 达标</td></tr>
+                <tr>
+                  <td>满意度</td>
+                  <td><span class="kv kv-fail">88.7%</span></td>
+                  <td class="tgt">≥93%</td>
+                  <td class="st-fail">● 未达标</td>
+                </tr>
+                <tr><td>FCR 一次解决率</td><td><span class="kv kv-ok">96.9%</span></td><td class="tgt">≥95%</td><td class="st-ok">● 达标</td></tr>
+                <tr><td rowspan="4" class="chan">电话</td><td>呼入量</td><td><span class="kv kv-neu">633</span></td><td class="tgt">—</td><td class="st-neu">—</td></tr>
+                <tr><td>接通率</td><td><span class="kv kv-ok">96.0%</span></td><td class="tgt">≥95%</td><td class="st-ok">● 达标</td></tr>
+                <tr><td>10s接通率</td><td><span class="kv kv-ok">81.5%</span></td><td class="tgt">≥80%</td><td class="st-ok">● 达标</td></tr>
+                <tr><td>电话满意度</td><td><span class="kv kv-ok">95.1%</span></td><td class="tgt">≥90%</td><td class="st-ok">● 达标</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:11.5px;color:#94a3b8;margin-top:8px">* CA 上周报告未发布，暂无 W20 趋势对比数据</p>
+          </div>
+          <div>
+            <div class="sublabel">洞察与原因解析</div>
+            <div class="insight-list">
+              <div class="ins ins-ok">
+                <div class="ins-lbl">✓ 电话渠道全线达标</div>
+                <div class="ins-txt">接通率 96%、10s接通 81.5%、满意度 95.1%，电话渠道本周表现稳健，所有指标均超目标。</div>
+              </div>
+              <div class="ins ins-ok">
+                <div class="ins-lbl">✓ 在线接通率 100%，FCR 96.9%</div>
+                <div class="ins-txt">在线接通能力及一次解决能力稳定达标，体现出高效的首次承接质量。</div>
+              </div>
+              <div class="ins ins-fail">
+                <div class="ins-lbl">🔴 在线满意度 88.7%，差目标 93% 约 4.3pp</div>
+                <div class="ins-txt">为本周 CA 唯一未达标指标。需结合不满意工单原因分类深入排查，参考 AI 分析数据识别高频不满意业务类型，针对性改善服务话术与处理流程。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── AU ── -->
+    <div class="mdetail">
+      <div class="mdetail-hd">
+        <h3>🇦🇺 AU — 详细数据与洞察</h3>
+        <span class="badge badge-fail">在线 479单 &nbsp;|&nbsp; 电话 855通（环比↓205通）</span>
+      </div>
+      <div class="mdetail-body">
+        <div class="detail-cols">
+          <div>
+            <div class="sublabel">KPI 总览（含已知趋势）</div>
+            <table class="ktable">
+              <thead><tr><th>渠道</th><th>指标</th><th>本周 W21</th><th>目标</th><th>状态 &amp; 趋势</th></tr></thead>
+              <tbody>
+                <tr><td rowspan="5" class="chan">在线</td><td>工单量</td><td><span class="kv kv-neu">479</span></td><td class="tgt">—</td><td class="st-neu">—</td></tr>
+                <tr><td>30s接通率</td><td><span class="kv kv-fail">88.02%</span></td><td class="tgt">≥95%</td><td class="st-fail">● 未达标</td></tr>
+                <tr><td>满意度</td><td><span class="kv kv-fail">84.47%</span></td><td class="tgt">≥98%</td><td class="st-fail">● 未达标</td></tr>
+                <tr><td>FCR 一次解决率</td><td><span class="kv kv-fail">95.20%</span></td><td class="tgt">≥98%</td><td class="st-fail">● 未达标</td></tr>
+                <tr><td>平均处理时长</td><td><span class="kv kv-ok">12.09m</span></td><td class="tgt">—</td><td class="st-ok">● 正常</td></tr>
+                <tr><td rowspan="3" class="chan">电话</td>
+                  <td>呼入量</td>
+                  <td><span class="kv kv-neu">855</span><span class="delta ddown"> ▼205通</span></td>
+                  <td class="tgt">—</td><td class="st-neu">—</td>
+                </tr>
+                <tr>
+                  <td>接通率</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-fail">73.68%</span>
+                      <span class="tr-badge tr-up">↑15.76pp</span>
+                    </div>
+                    <div class="tr-note">较上周改善（报告原文）</div>
+                  </td>
+                  <td class="tgt">>95%</td>
+                  <td class="st-fail">● 严重未达标<br><span class="tr-badge tr-up" style="margin-top:3px">趋势向好</span></td>
+                </tr>
+                <tr><td>电话满意度</td><td><span class="kv kv-fail">92.52%</span></td><td class="tgt">>98%</td><td class="st-fail">● 未达标</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:11.5px;color:#94a3b8;margin-top:8px">* AU 上周报告未发布，接通率趋势来自本周报告原文；其余指标暂无对比</p>
+          </div>
+          <div>
+            <div class="sublabel">背景说明 · 趋势与原因解析</div>
+            <div class="insight-list">
+              <div class="ins ins-context">
+                <div class="ins-lbl">📌 人力缺口根因：成都办公室关闭</div>
+                <div class="ins-txt">成都办公室关闭后，AU 市场咨询量全量转移至 MY 团队承接，团队短期内出现显著人力缺口。目前人力陆续补齐，新员工培训上线进行中，本周新人正式加入接单为重要节点。</div>
+              </div>
+              <div class="ins ins-ok">
+                <div class="ins-lbl">✓ 电话接通率 73.68%，较上周 ↑15.76pp，趋势向好</div>
+                <div class="ins-txt">呼入量环比↓205通（-19.34%），叠加新人加入，接通率已见明显改善。预计随人力补齐进度，接通率将持续回升。</div>
+              </div>
+              <div class="ins ins-fail">
+                <div class="ins-lbl">🔴 FCR 95.20%，TOP5 未解决原因集中于高难度场景</div>
+                <div class="ins-txt">
+                  本周电话未一次解决分布：<br>
+                  · 平台基础体验（登录相关）29%<br>
+                  · 交易（期权）29%<br>
+                  · AU转仓（催转入）14%<br>
+                  · AU入金（入金进度/催）14%<br>
+                  以上场景多需跨团队协作或平台支持，需针对性制定快速处理指引。
+                </div>
+              </div>
+              <div class="ins ins-warn">
+                <div class="ins-lbl">⚠ 在线满意度 84.47%，FCR 95.20%，距目标 98% 差距较大</div>
+                <div class="ins-txt">两项指标均有结构性差距，非短期人力问题可完全解决，需结合客户反馈制定中期改善路径。新人上线初期服务质量需重点监控。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /s2 -->
+
+
+  <!-- ═══════════════════════════════
+       SECTION 3  改善与跟进
+  ═══════════════════════════════ -->
+  <div class="section" id="s3">
+    <div class="section-hd">
+      <div class="section-num">3</div>
+      <div class="section-title">改善措施与跟进计划<span class="section-sub">— 待办 · 负责方向 · 预期时间</span></div>
+    </div>
+    <div class="action-card">
+      <table class="atable">
+        <thead>
+          <tr>
+            <th style="width:60px">市场</th>
+            <th>改善事项</th>
+            <th style="width:90px">优先级</th>
+            <th style="width:110px">预期时间</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="am">🇺🇸 US</td>
+            <td class="adesc"><strong>【紧急排查】</strong>电话满意度单周骤降 16.35pp（90.09%→73.74%），账户类（31.8%）+资金类（27.3%）为主因；输出不满工单专项分析，制定账户限制类/WIRE催办话术优化方案</td>
+            <td><span class="apri pri-urgent">紧急</span></td>
+            <td class="adate">2026-06-01</td>
+          </tr>
+          <tr>
+            <td class="am">🇺🇸 US</td>
+            <td class="adesc">深入分析在线满意度不满意工单业务分布（交易类/资金类为重点），制定专项提升方案；满意度已连续多周低于90%目标</td>
+            <td><span class="apri pri-urgent">紧急</span></td>
+            <td class="adate">2026-06-01</td>
+          </tr>
+          <tr>
+            <td class="am">🇺🇸 US</td>
+            <td class="adesc">5/24 已完成对应培训，即时按标准话术承接相关咨询</td>
+            <td><span class="apri pri-done">已完成</span></td>
+            <td class="adate">5/24 ✓</td>
+          </tr>
+          <tr>
+            <td class="am">🇺🇸 US</td>
+            <td class="adesc"><strong>【⚡ 48h内】5/27 W8 第三批 10,000 封即将发出</strong>，需确认人力排班到位、话术就绪；后续 6/1（10,000封）、6/5（9,822封）持续监控；6/12 将发 149,070 封无资产客户，量级与首批相当，需提前2周启动备战；同步跟踪产品确认客户限制触发时间节点</td>
+            <td><span class="apri pri-urgent">紧急</span></td>
+            <td class="adate">5/27 即将 ⚡</td>
+          </tr>
+          <tr>
+            <td class="am">🇺🇸 US</td>
+            <td class="adesc">准备 Anthropic IPO 标准口径和 FAQ，客户咨询已开始出现，避免信息不一致</td>
+            <td><span class="apri pri-new">新增</span></td>
+            <td class="adate">2026-06-07</td>
+          </tr>
+          <tr>
+            <td class="am">🇺🇸 US</td>
+            <td class="adesc"><strong>【入金双高风险专项复盘】</strong>入金 FCR 93.7%（低于整体 96.4%）+ 不满率 5.8%，为本周在线最高风险业务。复盘 12 单未解决工单的失败/延迟场景，制定针对性话术和升级处理 SOP</td>
+            <td><span class="apri pri-urgent">紧急</span></td>
+            <td class="adate">2026-06-01</td>
+          </tr>
+          <tr>
+            <td class="am">🇺🇸 US</td>
+            <td class="adesc">加密货币（不满率 11.1%）/ 用户营销工具（7%）话术边界与预期管理优化——FCR 已达标但客户不满，核查解答标准与客户预期落差，更新话术及 FAQ</td>
+            <td><span class="apri pri-new">新增</span></td>
+            <td class="adate">2026-06-07</td>
+          </tr>
+          <tr>
+            <td class="am">🇨🇦 CA</td>
+            <td class="adesc">分析在线满意度不满意工单主因类别（88.7% vs 目标93%），结合 AI 数据制定改善 SOP</td>
+            <td><span class="apri pri-ongoing">跟进中</span></td>
+            <td class="adate">2026-06-07</td>
+          </tr>
+          <tr>
+            <td class="am">🇦🇺 AU</td>
+            <td class="adesc">每周跟踪新人上线后电话接通率变化，目标回升路径：W22≥80%、W23≥90%；若连续两周改善低于预期，启动增援评估</td>
+            <td><span class="apri pri-urgent">紧急</span></td>
+            <td class="adate">每周复盘</td>
+          </tr>
+          <tr>
+            <td class="am">🇦🇺 AU</td>
+            <td class="adesc">针对FCR TOP5未解决类型（登录/期权/转仓/入金）制定场景化处理指引和快速转接流程，降低复访率</td>
+            <td><span class="apri pri-new">新增</span></td>
+            <td class="adate">2026-06-14</td>
+          </tr>
+          <tr>
+            <td class="am">🇦🇺 AU</td>
+            <td class="adesc">跟踪新人上线初期服务质量（满意度/FCR），制定新人专项辅导机制，防止因新人比例上升拉低整体指标</td>
+            <td><span class="apri pri-ongoing">跟进中</span></td>
+            <td class="adate">2026-06-30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<div class="page-footer">
+  数据来源：
+  <a href="https://weekly-8f989d.gitpages.futuoa.com/weekly-2026-W21.html" target="_blank">US W21 周报</a> &nbsp;·&nbsp;
+  <a href="https://weekly-8f989d.gitpages.futuoa.com/weekly-2026-W20.html" target="_blank">US W20 周报</a> &nbsp;·&nbsp;
+  <a href="https://jean-jia.github.io/futu-report/weekly/weekly-2026-05-15.html?tab=weekly&week=2026-05-15" target="_blank">CA 周报</a> &nbsp;·&nbsp;
+  <a href="https://au-cs-weekly-report-aca12e.gitpages.futuoa.com/weekly-2026-05-21.html" target="_blank">AU 周报</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp; 自动生成 · 2026-05-25
+</div>
+
+<script>
+const sections = document.querySelectorAll('.section[id]');
+const navLinks = document.querySelectorAll('.nav-bar a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+});
+</script>
+</body>
+</html>
