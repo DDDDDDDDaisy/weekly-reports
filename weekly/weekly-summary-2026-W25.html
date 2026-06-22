@@ -246,17 +246,21 @@ body {
         <div class="mc-top">
           <div class="mc-hd">
             <div class="mc-name">🇨🇦 CA</div>
-            <span class="badge badge-neu">— 本期暂无数据</span>
+            <span class="badge badge-warn">⚠ 在线满意度差目标9.4pp</span>
           </div>
           <p class="mc-summary">
-            本期 CA 周报数据暂缺，待 Jean 团队更新后补充至下期报告。<br><br>
-            <strong>参考上期（W21）：</strong>电话全线达标（接通 96%、满意 95.1%），在线满意度 88.7% 为唯一缺口（差目标 93% 约 4.3pp）。
+            <strong>电话渠道全线大幅达标：接通率 97.62%（↑4.55pp）、20s接通 86.09%（↑15.75pp）、满意度 94.59%，本周表现突出。</strong><br>
+            在线满意度 83.58%（↓1.17pp）是唯一缺口，差目标 93% 约 9.4pp；Top不满来源：出入金时效、交易限制、转仓进度不透明。FCR 96.23%✅，AHT 12.41m✅。<br>
+            QA 整体良好，致命差错率 0.74%（2件，在线1+电话1），较上周1.12%明显下降。
           </p>
         </div>
         <div class="mc-kpis">
-          <div class="kchip"><span class="dot d-neu"></span><b>暂无本期数据</b></div>
-          <div class="kchip"><span class="dot d-ok"></span><b>参考W21：电话接通 96%</b></div>
-          <div class="kchip"><span class="dot d-fail"></span><b>参考W21：在线满意 88.7%</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>电话接通 97.62% ↑4.6pp ✓</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>电话满意 94.59% ↑3.4pp</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>20s接通 86.09% ↑15.8pp</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>在线接通 99.37%</b></div>
+          <div class="kchip"><span class="dot d-fail"></span><b>在线满意 83.58% ↓1.2pp</b></div>
+          <div class="kchip"><span class="dot d-ok"></span><b>FCR 96.23% ✓</b></div>
         </div>
       </div>
 
@@ -485,19 +489,135 @@ body {
     <!-- ── CA ── -->
     <div class="mdetail">
       <div class="mdetail-hd">
-        <h3>🇨🇦 CA — 本期暂无数据</h3>
-        <span class="badge badge-neu">待 Jean 团队更新</span>
+        <h3>🇨🇦 CA — 详细数据与洞察（6/12–6/18）</h3>
+        <span class="badge badge-warn">在线 477单 &nbsp;|&nbsp; 电话 798通 ↓82</span>
       </div>
       <div class="mdetail-body">
-        <div class="insight-list">
-          <div class="ins ins-context">
-            <div class="ins-lbl">📌 本期 CA 周报暂缺，下期补充</div>
-            <div class="ins-txt">
-              <strong>上期参考（W21，5/15–5/21）：</strong><br>
-              · 电话接通率 96%（目标≥95%）✅ &nbsp;| &nbsp;10s接通 81.5%✅ &nbsp;| &nbsp;电话满意度 95.1%✅<br>
-              · 在线接通率 100%✅ &nbsp;| &nbsp;FCR 96.9%✅<br>
-              · 在线满意度 88.7%❌（差目标 93% 约 4.3pp）——为 CA 持续改善重点<br><br>
-              下期将更新 W25 实际数据。
+        <div class="detail-cols">
+          <div>
+            <div class="sublabel">KPI 总览（含环比趋势）</div>
+            <table class="ktable">
+              <thead><tr><th>渠道</th><th>指标</th><th>本周</th><th>目标</th><th>状态 &amp; 趋势</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4" class="chan">在线</td>
+                  <td>工单量</td>
+                  <td><span class="kv kv-neu">477</span><span class="delta dup"> ↑17</span></td>
+                  <td class="tgt">—</td><td class="st-neu">—</td>
+                </tr>
+                <tr>
+                  <td>30s接通率</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-ok">99.37%</span>
+                      <span class="tr-badge tr-down">▼0.20pp</span>
+                    </div>
+                  </td>
+                  <td class="tgt">≥95%</td><td class="st-ok">● 达标</td>
+                </tr>
+                <tr>
+                  <td>满意度</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-fail">83.58%</span>
+                      <span class="tr-badge tr-down">▼1.17pp</span>
+                    </div>
+                    <div class="tr-note">上周: 84.75%</div>
+                  </td>
+                  <td class="tgt">≥93%</td>
+                  <td class="st-fail">● 未达标<br><span class="tr-badge tr-down" style="margin-top:3px">差9.4pp</span></td>
+                </tr>
+                <tr>
+                  <td>FCR</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-ok">96.23%</span>
+                      <span class="tr-badge tr-down">▼1.81pp</span>
+                    </div>
+                  </td>
+                  <td class="tgt">≥95%</td><td class="st-ok">● 达标</td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="chan">电话</td>
+                  <td>呼入量</td>
+                  <td><span class="kv kv-neu">798</span><span class="delta ddown"> ↓82</span></td>
+                  <td class="tgt">—</td><td class="st-neu">—</td>
+                </tr>
+                <tr>
+                  <td>接通率</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-ok">97.62%</span>
+                      <span class="tr-badge tr-up">↑4.55pp</span>
+                    </div>
+                    <div class="tr-note">上周: 93.07%</div>
+                  </td>
+                  <td class="tgt">≥95%</td><td class="st-ok">● 达标</td>
+                </tr>
+                <tr>
+                  <td>20s接通率</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-ok">86.09%</span>
+                      <span class="tr-badge tr-up">↑15.75pp</span>
+                    </div>
+                    <div class="tr-note">上周: 70.34%</div>
+                  </td>
+                  <td class="tgt">≥80%</td><td class="st-ok">● 达标</td>
+                </tr>
+                <tr>
+                  <td>满意度</td>
+                  <td>
+                    <div class="trend-row">
+                      <span class="kv kv-ok">94.59%</span>
+                      <span class="tr-badge tr-up">↑3.38pp</span>
+                    </div>
+                  </td>
+                  <td class="tgt">≥90%</td><td class="st-ok">● 达标</td>
+                </tr>
+                <tr>
+                  <td>AHT</td>
+                  <td><span class="kv kv-ok">6.0m</span></td>
+                  <td class="tgt">≤7min</td><td class="st-ok">● 达标</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="sublabel" style="margin-top:16px">QA 质检（本周）</div>
+            <table class="ktable">
+              <thead><tr><th>渠道</th><th>采样</th><th>致命差错率</th><th>致命</th><th>状态</th></tr></thead>
+              <tbody>
+                <tr><td>在线</td><td>101</td><td><span class="kv kv-ok" style="font-size:13px">0.99%</span></td><td>1</td><td class="st-ok">● 达标</td></tr>
+                <tr><td>电话</td><td>133</td><td><span class="kv kv-ok" style="font-size:13px">0.75%</span></td><td>1</td><td class="st-ok">● 达标</td></tr>
+                <tr><td>邮件</td><td>35</td><td><span class="kv kv-ok" style="font-size:13px">0%</span></td><td>0</td><td class="st-ok">● 达标</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:11.5px;color:#94a3b8;margin-top:6px">总致命差错率 0.74%（较上周 1.12% 下降 0.38pp）</p>
+          </div>
+          <div>
+            <div class="sublabel">洞察与原因解析</div>
+            <div class="insight-list">
+              <div class="ins ins-ok">
+                <div class="ins-lbl">✅ 电话渠道全面大幅改善</div>
+                <div class="ins-txt">接通率 97.62%（↑4.55pp）、20s接通率 86.09%（↑15.75pp）、满意度 94.59%（↑3.38pp），三项指标均显著回升并全部达标。上周接通率不达标（93.07%）的高峰时段集中呼入问题，本周已改善。</div>
+              </div>
+              <div class="ins ins-ok">
+                <div class="ins-lbl">✅ QA 整体健康，致命差错率 0.74% 较上周下降</div>
+                <div class="ins-txt">三渠道总致命差错 2 件（在线1：操作违规发送内网截图；电话1：承诺回电未兑现），均为偶发性问题，整体质检状态良好。</div>
+              </div>
+              <div class="ins ins-fail">
+                <div class="ins-lbl">🔴 在线满意度 83.58%，差目标 93% 约 9.4pp，为 CA 核心持续改善点</div>
+                <div class="ins-txt">
+                  Top 不满来源：<br>
+                  · <strong>出入金时效</strong>：EFT入金 5 个工作日到账、出金 90 天锁定期，客户对时效和规则不满<br>
+                  · <strong>交易限制</strong>：特定时段/账户类型遇操作限制，货币兑换次日才能操作<br>
+                  · <strong>转仓进度</strong>：ATON转仓 5–10 个工作日，进度不透明，客户反复追问<br>
+                  建议：针对以上三类场景补充预期管理话术，在客户咨询时主动告知时效和查询方式。
+                </div>
+              </div>
+              <div class="ins ins-warn">
+                <div class="ins-lbl">⚠ bryanlee 在线满意度 71.43%，kelvinteo 66.67%</div>
+                <div class="ins-txt">两人满意度明显低于团队均值（83.58%），本周工单量分别为 72 和 15。建议 Jean 对低满意度工单做针对性复盘，尤其 bryanlee 样本量较大（72单），需排查是否有系统性的话术/处理问题。</div>
+              </div>
             </div>
           </div>
         </div>
@@ -746,9 +866,9 @@ body {
           </tr>
           <tr>
             <td class="am">🇨🇦 CA</td>
-            <td class="adesc">本期数据缺失，向 Jean 确认 W25 报告发布时间，纳入下期报告；持续跟踪在线满意度改善进展（上期 88.7%，目标 93%，差 4.3pp）</td>
-            <td><span class="apri pri-ongoing">跟进中</span></td>
-            <td class="adate">下期补充</td>
+            <td class="adesc"><strong>在线满意度专项改善</strong>：83.58%，差目标 9.4pp，连续两期未达标。Top 痛点为出入金时效、交易限制、转仓进度不透明，建议补充预期管理话术；复盘 bryanlee（72单，满意度71.43%）和 kelvinteo（15单，66.67%）低满意工单原因</td>
+            <td><span class="apri pri-urgent">紧急</span></td>
+            <td class="adate">2026-06-28</td>
           </tr>
           <tr>
             <td class="am">🇦🇺 AU</td>
@@ -779,7 +899,7 @@ body {
   数据来源：
   <a href="https://khorbinz.github.io/weekly/weekly-2026-W25.html" target="_blank">US W25 周报</a> &nbsp;·&nbsp;
   <a href="https://au-cs-weekly-report-aca12e.gitpages.futuoa.com/weekly-2026-06-11.html" target="_blank">AU 周报（6/5–6/11）</a> &nbsp;·&nbsp;
-  <a href="https://jean-jia.github.io/futu-report/weekly/weekly-2026-06-05.html?tab=weekly&week=2026-06-05" target="_blank">CA 周报（本期无数据）</a>
+  <a href="https://jean-jia.github.io/futu-report/weekly/weekly-2026-06-12.html?tab=weekly&week=2026-06-12" target="_blank">CA 周报（6/12–6/18）</a>
   &nbsp;&nbsp;|&nbsp;&nbsp; 自动生成 · 2026-06-22
 </div>
 
